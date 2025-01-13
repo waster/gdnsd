@@ -833,7 +833,7 @@ sub _compare_rrsets {
     } elsif($rrtype eq 'CNAME') {
         $limit = 1;
     } elsif($rrtype eq 'OPT') {
-	my $cookie_num = ednsoptionbyname('COOKIE');
+        my $cookie_num = ednsoptionbyname('COOKIE');
         $_lastacookie = undef;
         my $ccookieval = $c_rrset->[0]->{option}{$cookie_num};
         if (defined $ccookieval) {
